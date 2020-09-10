@@ -1,0 +1,3 @@
+Data Source=EPINHYDW03B3\MSSQLSERVER1;Initial Catalog=TestDB;Integrated Security=True
+
+Server=(localdb)\\mssqllocaldb;Database=WebAppContext-72fc3a14-e29d-4f69-80b3-1ef4ba75d397;Trusted_Connection=True;MultipleActiveResultSets=true
