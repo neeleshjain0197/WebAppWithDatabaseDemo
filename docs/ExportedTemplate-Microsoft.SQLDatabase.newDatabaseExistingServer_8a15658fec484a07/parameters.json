@@ -1,0 +1,120 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "collation": {
+            "value": "SQL_Latin1_General_CP1_CI_AS"
+        },
+        "databaseName": {
+            "value": "sso"
+        },
+        "tier": {
+            "value": "Basic"
+        },
+        "skuName": {
+            "value": "Basic"
+        },
+        "maxSizeBytes": {
+            "value": 2147483648
+        },
+        "serverName": {
+            "value": "oci-sql-server"
+        },
+        "serverLocation": {
+            "value": "eastasia"
+        },
+        "sampleName": {
+            "value": ""
+        },
+        "zoneRedundant": {
+            "value": false
+        },
+        "licenseType": {
+            "value": ""
+        },
+        "readScaleOut": {
+            "value": "Disabled"
+        },
+        "numberOfReplicas": {
+            "value": 0
+        },
+        "minCapacity": {
+            "value": ""
+        },
+        "autoPauseDelay": {
+            "value": ""
+        },
+        "databaseTags": {
+            "value": {}
+        },
+        "enableADS": {
+            "value": false
+        },
+        "enableVA": {
+            "value": false
+        },
+        "useVAManagedIdentity": {
+            "value": false
+        },
+        "enablePrivateEndpoint": {
+            "value": false
+        },
+        "privateEndpointNestedTemplateId": {
+            "value": "pe-c5c7a322-9f0d-45f4-aeb7-d35bdb4b700e"
+        },
+        "privateEndpointSubscriptionId": {
+            "value": ""
+        },
+        "privateEndpointResourceGroup": {
+            "value": ""
+        },
+        "privateEndpointName": {
+            "value": ""
+        },
+        "privateEndpointLocation": {
+            "value": ""
+        },
+        "privateEndpointSubnetId": {
+            "value": ""
+        },
+        "privateLinkServiceName": {
+            "value": ""
+        },
+        "privateLinkServiceServiceId": {
+            "value": ""
+        },
+        "privateEndpointVnetSubscriptionId": {
+            "value": ""
+        },
+        "privateEndpointVnetResourceGroup": {
+            "value": ""
+        },
+        "privateEndpointVnetName": {
+            "value": ""
+        },
+        "privateEndpointSubnetName": {
+            "value": ""
+        },
+        "enablePrivateDnsZone": {
+            "value": true
+        },
+        "privateLinkPrivateDnsZoneFQDN": {
+            "value": "privatelink.database.windows.net"
+        },
+        "privateEndpointDnsRecordUniqueId": {
+            "value": "c5c7a322-9f0d-45f4-aeb7-d35bdb4b700f"
+        },
+        "privateEndpointTemplateLink": {
+            "value": "https://sqlazureextension.hosting.portal.azure.net/sqlazureextension/Content/2.1.0131559/DeploymentTemplates/PrivateEndpoint.json"
+        },
+        "privateDnsForPrivateEndpointTemplateLink": {
+            "value": "https://sqlazureextension.hosting.portal.azure.net/sqlazureextension/Content/2.1.0131559/DeploymentTemplates/PrivateDnsForPrivateEndpoint.json"
+        },
+        "privateDnsForPrivateEndpointNicTemplateLink": {
+            "value": "https://sqlazureextension.hosting.portal.azure.net/sqlazureextension/Content/2.1.0131559/DeploymentTemplates/PrivateDnsForPrivateEndpointNic.json"
+        },
+        "privateDnsForPrivateEndpointIpConfigTemplateLink": {
+            "value": "https://sqlazureextension.hosting.portal.azure.net/sqlazureextension/Content/2.1.0131559/DeploymentTemplates/PrivateDnsForPrivateEndpointIpConfig.json"
+        }
+    }
+}
