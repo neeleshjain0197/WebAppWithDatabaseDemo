@@ -42,3 +42,12 @@ steps:
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
+
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go (a99f9973-d416-447b-9df3-d56d5fb7fc19)'
+    appType: 'webApp'
+    WebAppName: 'EPAM-WebApp-AzDevOps'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
