@@ -43,6 +43,14 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
 
+- task: DownloadBuildArtifacts@0    
+  displayName: 'Download WebApp.zip'
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'drop'
+    itemPattern: '**/WebApp.zip'
+    downloadPath: '$(System.DefaultWorkingDirectory)'
 
 - task: AzureRmWebAppDeployment@4
   enabled: 'true'
