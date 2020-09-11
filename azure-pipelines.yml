@@ -43,11 +43,20 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
 
+- task: DownloadBuildArtifacts@0    
+  displayName: 'Download WebApp.zip'
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'drop'
+    itemPattern: '**/WebApp.zip'
+    downloadPath: '$(System.DefaultWorkingDirectory)'
 
 - task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
+  enabled: 'true'
+  inputs:    
     azureSubscription: 'Pay-As-You-Go (a99f9973-d416-447b-9df3-d56d5fb7fc19)'
     appType: 'webApp'
     WebAppName: 'EPAM-WebApp-AzDevOps'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    TakeAppOfflineFlag: true
+    packageForLinux: '$(System.DefaultWorkingDirectory)/drop/WebApp.zip'
